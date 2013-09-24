@@ -23,6 +23,10 @@
 		CE514EF417F150C3000313CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE514ECF17F150C3000313CE /* Foundation.framework */; };
 		CE514EFC17F150C3000313CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE514EFA17F150C3000313CE /* InfoPlist.strings */; };
 		CE514EFF17F150C3000313CE /* DemoUsingLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE514EFE17F150C3000313CE /* DemoUsingLibTests.m */; };
+		CE514F0C17F15359000313CE /* libImageFilters.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE514F0B17F15359000313CE /* libImageFilters.a */; };
+		CE514F0D17F15359000313CE /* libImageFilters.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE514F0B17F15359000313CE /* libImageFilters.a */; };
+		CE514F1217F17886000313CE /* CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CE514F1117F17886000313CE /* CustomImage.m */; };
+		CE514F1317F17886000313CE /* CustomImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CE514F1117F17886000313CE /* CustomImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,10 @@
 		CE514EFB17F150C3000313CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE514EFD17F150C3000313CE /* DemoUsingLibTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoUsingLibTests.h; sourceTree = "<group>"; };
 		CE514EFE17F150C3000313CE /* DemoUsingLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoUsingLibTests.m; sourceTree = "<group>"; };
+		CE514F0A17F15359000313CE /* ImageFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageFilters.h; sourceTree = "<group>"; };
+		CE514F0B17F15359000313CE /* libImageFilters.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libImageFilters.a; sourceTree = "<group>"; };
+		CE514F1017F17886000313CE /* CustomImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImage.h; sourceTree = "<group>"; };
+		CE514F1117F17886000313CE /* CustomImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 				CE514ECE17F150C3000313CE /* UIKit.framework in Frameworks */,
 				CE514ED017F150C3000313CE /* Foundation.framework in Frameworks */,
 				CE514ED217F150C3000313CE /* CoreGraphics.framework in Frameworks */,
+				CE514F0C17F15359000313CE /* libImageFilters.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,7 @@
 				CE514EF217F150C3000313CE /* SenTestingKit.framework in Frameworks */,
 				CE514EF317F150C3000313CE /* UIKit.framework in Frameworks */,
 				CE514EF417F150C3000313CE /* Foundation.framework in Frameworks */,
+				CE514F0D17F15359000313CE /* libImageFilters.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +129,8 @@
 			children = (
 				CE514EDC17F150C3000313CE /* AppDelegate.h */,
 				CE514EDD17F150C3000313CE /* AppDelegate.m */,
+				CE514F1017F17886000313CE /* CustomImage.h */,
+				CE514F1117F17886000313CE /* CustomImage.m */,
 				CE514EE517F150C3000313CE /* ViewController.h */,
 				CE514EE617F150C3000313CE /* ViewController.m */,
 				CE514EE817F150C3000313CE /* ViewController.xib */,
@@ -130,6 +142,8 @@
 		CE514ED417F150C3000313CE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CE514F0817F15359000313CE /* include */,
+				CE514F0B17F15359000313CE /* libImageFilters.a */,
 				CE514ED517F150C3000313CE /* DemoUsingLib-Info.plist */,
 				CE514ED617F150C3000313CE /* InfoPlist.strings */,
 				CE514ED917F150C3000313CE /* main.m */,
@@ -158,6 +172,22 @@
 				CE514EFA17F150C3000313CE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE514F0817F15359000313CE /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CE514F0917F15359000313CE /* ImageFilters */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		CE514F0917F15359000313CE /* ImageFilters */ = {
+			isa = PBXGroup;
+			children = (
+				CE514F0A17F15359000313CE /* ImageFilters.h */,
+			);
+			path = ImageFilters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +303,7 @@
 				CE514EDA17F150C3000313CE /* main.m in Sources */,
 				CE514EDE17F150C3000313CE /* AppDelegate.m in Sources */,
 				CE514EE717F150C3000313CE /* ViewController.m in Sources */,
+				CE514F1217F17886000313CE /* CustomImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE514EFF17F150C3000313CE /* DemoUsingLibTests.m in Sources */,
+				CE514F1317F17886000313CE /* CustomImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +416,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoUsingLib/DemoUsingLib-Prefix.pch";
 				INFOPLIST_FILE = "DemoUsingLib/DemoUsingLib-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DemoUsingLib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -395,6 +431,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoUsingLib/DemoUsingLib-Prefix.pch";
 				INFOPLIST_FILE = "DemoUsingLib/DemoUsingLib-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DemoUsingLib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -411,6 +451,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoUsingLib/DemoUsingLib-Prefix.pch";
 				INFOPLIST_FILE = "DemoUsingLibTests/DemoUsingLibTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DemoUsingLib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -428,6 +472,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DemoUsingLib/DemoUsingLib-Prefix.pch";
 				INFOPLIST_FILE = "DemoUsingLibTests/DemoUsingLibTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/DemoUsingLib\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
